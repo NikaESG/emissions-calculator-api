@@ -1,0 +1,13 @@
+time="2022-07-03 02:24:26" level=info msg="| 404 |         143ns |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:24:49" level=info msg="| 404 |         135ns |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:25:18" level=info msg="| 404 |         155ns |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:26:34" level=info msg=request_processed_successfully path=/api/v1/connector/list_connections
+time="2022-07-03 02:26:34" level=info msg="| 200 |  5.224790277s |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:29:02" level=info msg=request_processed_successfully path=/api/v1/connector/list_connections
+time="2022-07-03 02:29:02" level=info msg="| 200 | 2m4.950214355s |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:29:12" level=info msg=request_processed_successfully path=/api/v1/connector/list_connections
+time="2022-07-03 02:29:12" level=info msg="| 200 |     7.271693s |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:30:51" level=info msg=request_processed_successfully path=/api/v1/connector/list_connections
+time="2022-07-03 02:30:51" level=info msg="| 200 | 1m32.231056462s |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"
+time="2022-07-03 02:40:51" level=info msg=request_processed_successfully path=/api/v1/connector/list_connections
+time="2022-07-03 02:40:51" level=info msg="| 200 |  8.144569716s |       127.0.0.1 | POST | /api/v1/nocodedb/get_data |"

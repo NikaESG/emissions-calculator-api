@@ -1,0 +1,57 @@
+apiVersion: v1
+data:
+  sheets.properties: |-
+    connector.name=gsheets
+    credentials-path=/etc/trino/secret/google-sheets-credentials.json
+    metadata-sheet-id=1s5o1qvqqPxDYGMDb93k-fjk-Khfsf0YAfJleP0U-SYo
+  tpcds.properties: |
+    connector.name=tpcds
+    tpcds.splits-per-node=4
+  tpch.properties: |
+    connector.name=tpch
+    tpch.splits-per-node=4
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"sheets.properties":"connector.name=gsheets\ncredentials-path=/etc/trino/secret/google-sheets-credentials.json\nmetadata-sheet-id=1s5o1qvqqPxDYGMDb93k-fjk-Khfsf0YAfJleP0U-SYo","tpcds.properties":"connector.name=tpcds\ntpcds.splits-per-node=4\n","tpch.properties":"connector.name=tpch\ntpch.splits-per-node=4\n"},"kind":"ConfigMap","metadata":{"annotations":{"meta.helm.sh/release-name":"tcb","meta.helm.sh/release-namespace":"test"},"creationTimestamp":"2022-05-15T16:09:14Z","labels":{"app":"trino","app.kubernetes.io/managed-by":"Helm","chart":"trino-0.7.0","heritage":"Helm","release":"tcb","role":"catalogs"},"managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:data":{".":{},"f:tpcds.properties":{},"f:tpch.properties":{}},"f:metadata":{"f:annotations":{".":{},"f:meta.helm.sh/release-name":{},"f:meta.helm.sh/release-namespace":{}},"f:labels":{".":{},"f:app":{},"f:app.kubernetes.io/managed-by":{},"f:chart":{},"f:heritage":{},"f:release":{},"f:role":{}}}},"manager":"helm","operation":"Update","time":"2022-05-15T16:09:14Z"},{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:data":{"f:sheets.properties":{}}},"manager":"kubectl-patch","operation":"Update","time":"2022-05-22T02:21:45Z"}],"name":"tcb-trino-catalog","namespace":"test","resourceVersion":"3683407","uid":"5d510371-5a2d-4d26-8c48-71de7d6a9b83"}}
+    meta.helm.sh/release-name: tcb
+    meta.helm.sh/release-namespace: test
+  creationTimestamp: "2022-05-22T02:28:00Z"
+  labels:
+    app: trino
+    app.kubernetes.io/managed-by: Helm
+    chart: trino-0.7.0
+    heritage: Helm
+    release: tcb
+    role: catalogs
+  managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:sheets.properties: {}
+          f:tpcds.properties: {}
+          f:tpch.properties: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:chart: {}
+            f:heritage: {}
+            f:release: {}
+            f:role: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2022-05-22T02:28:00Z"
+  name: tcb-trino-catalog
+  namespace: test
+  resourceVersion: "3684374"
+  uid: 22d18bbd-3f8c-41f6-b60d-ca92c738e8ed
