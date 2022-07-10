@@ -1,33 +1,19 @@
-# no-code-db-customized
+## API 可以考虑的方向
 
+1. 可以入参是两部分：
 
-Docker:
+- 表达式
+- 表达式中变量的内容
 
-```
-docker build -t xxx:xx .
-docker tag xxxx xxxxx
-docker push xxxx
-```
+通过括号进行优先级
 
-1. Get Data
+experssion: ((A+B)*C)
+variable: A: xxxx, B: xxx, C: xx
 
-```
-http://localhost:8081/api/v1/nocodedb/get_data
+2. 创建每一级的表达式，但是每一个表达式必须简单
 
-{
-    "table_name": "Projects",
-    "field_name":"CO2E"
-}
+同样的需要创建((A+B)*C)
 
-Response:
+- 创建 Name1： A+B
+- 创建 Name2： Name1*C
 
-{
-    "Ret": 0,
-    "Msg": "Get Data successfully.",
-    "data": [
-        "220.0000000000",
-        "110.0000000000",
-        "330.0000000000"
-    ]
-}
-```
